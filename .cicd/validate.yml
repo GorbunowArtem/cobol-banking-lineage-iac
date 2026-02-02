@@ -1,0 +1,19 @@
+version : 0.2
+env :
+  shell : bash
+  variables :
+    PROJECT_NAME : cobol-banking-lineage-iac
+phases :
+  install :
+    commands :
+      - echo "Installing dependencies..."
+  pre_build:
+    commands:
+      - find .cicd/scripts -name *.sh -type f -exec chmod +x {} \;
+  build:
+    commands :
+      - source .cicd/scripts/init.sh
+      - source .cicd/scripts/validate.sh
+      - source .cicd/scripts/deploy.sh
+    finally:
+      - echo "Build phase completed."

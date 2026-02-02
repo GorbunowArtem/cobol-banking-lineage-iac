@@ -1,0 +1,50 @@
+jwt
+jwt-prod
+jwt-latest
+jwt-dev
+.venv
+
+# User passwords file (contains plain text passwords)
+users/user_passwords.json
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Ignore Terraform state files
+*.tfstate
+*.tfstate.*
+
+# Ignore crash logs
+crash.log
+
+# Ignore Terraform variable files
+*.tfvars
+*.tfvars.json
+
+# Ignore Terraform plan output
+*.tfplan
+
+# Ignore .terraform directories (modules/plugins)
+.terraform/
+.terraform.lock.hcl
+
+# Ignore Terragrunt cache and logs
+.terragrunt-cache/
+terragrunt-debug.tfvars
+
+# Ignore local override files
+override.tf
+override.tf.json
+*_override.tf
+*_override.tf.json
+
+# Ignore sensitive files
+secret.auto.tfvars
+
+.vs/
+
+.kiro
+aws-creds
+/venv
